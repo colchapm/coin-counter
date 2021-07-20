@@ -7,11 +7,13 @@ describe ('coinCounterRecursive', () => {
     const newTest = new coinCounter();
     expect(newTest.coinCounterRecursive(givenAmount)).toEqual('Error, try again.');
   });
-  test('should return hello world', () => { 
-    const givenAmount = 10
+  test('should return number of pennies', () => { 
+    const givenAmount = .04
     const newTest = new coinCounter();
-    expect(newTest.coinCounterRecursive(givenAmount)).toEqual('hello world');
+    expect(newTest.coinCounterRecursive(givenAmount)).toEqual('your change back is in pennies: 4');
   });
+
+  
 
 });
 

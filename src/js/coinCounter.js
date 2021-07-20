@@ -6,10 +6,34 @@ export default class coinCounter {
 
     if (isNaN(givenAmount)) {
       return 'Error, try again.';
+    } // termination case
+    const changeBack = givenAmount * 100;
+
+    if (changeBack < 5) { // base case
+      const numberOfPenny = changeBack
+      console.log(numberOfPenny)
+      return (`your change back is in pennies: ${numberOfPenny}`)
     }
-    else {
-      return ("hello world") 
+
+    else if (remainingChange < 10) {
+      const remainingChange = changeBack % 5 / 100 
+      const numberOfNickel = parseInt(change/5)
+      console.log(numberOfNickel)
+      return coinCounterRecursive(remainingChange) 
     }
+
+    else if (remainingChange < 25) {
+      const remainingChange = changeBack % 10 / 100 
+      const numberOfDime = parseInt(change/10)
+      console.log(numberOfDime)
+      return coinCounterRecursive(remainingChange)
+    }
+
+    else 
+    remainingChange = changeBack % 25 / 100 
+    numberOfQuarter = parseInt(changeBack/25)
+    console.lot(numberOfQuarter)
+    return coinCounterRecursive(remainingChange)
 
   }
 }
