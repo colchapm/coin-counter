@@ -8,9 +8,14 @@ describe ('coinCounterRecursive', () => {
     expect(newTest.coinCounterRecursive(givenAmount)).toEqual('Error, try again.');
   });
   test('should return number of pennies', () => { 
-    const givenAmount = .04
+    const givenAmount = .09
     const newTest = new coinCounter();
-    expect(newTest.coinCounterRecursive(givenAmount)).toEqual('your change back is in pennies: 4');
+    expect(newTest.coinCounterRecursive(givenAmount)).toEqual('your change back in pennies is: 4');
+  });
+  test('should return number of nickels', () => { 
+    const givenAmount = .09
+    const newTest = new coinCounter();
+    expect(newTest.coinCounterRecursive(givenAmount)).toEqual('your change back in nickels is: 1');
   });
 
   
